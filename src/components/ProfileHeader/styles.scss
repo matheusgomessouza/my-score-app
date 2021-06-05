@@ -2,6 +2,9 @@ $color_text: #606060;
 $color_text_light: #9b9b9b;
 $color_link: #824274;
 $color_offer_debt: #E1801C;
+$color_level_low: linear-gradient(90deg, rgba(223,99,35,1) 0%, rgba(224,138,27,1) 50%, rgba(226,177,16,1) 100%);;
+$color_level_medium: linear-gradient(90deg, rgba(222,183,28,1) 0%, rgba(166,188,104,1) 50%, rgba(108,194,187,1) 100%);
+$color_level_high: linear-gradient(90deg, rgba(109,195,186,1) 0%, rgba(61,149,150,1) 50%, rgba(8,96,106,1) 100%);
 
 @mixin size_bar {
   width: 100%;
@@ -98,13 +101,13 @@ $color_offer_debt: #E1801C;
         }
 
         .bar_level_low {
-          background: linear-gradient(90deg, rgba(223,99,35,1) 0%, rgba(224,138,27,1) 50%, rgba(226,177,16,1) 100%);
+          background: $color_level_low
         }
         .bar_level_medium {
-          background: linear-gradient(90deg, rgba(222,183,28,1) 0%, rgba(166,188,104,1) 50%, rgba(108,194,187,1) 100%);
+          background: $color_level_medium
         }
         .bar_level_high {
-          background: linear-gradient(90deg, rgba(109,195,186,1) 0%, rgba(61,149,150,1) 50%, rgba(8,96,106,1) 100%);
+          background: $color_level_high
         }
       }
 
@@ -121,7 +124,8 @@ $color_offer_debt: #E1801C;
   @include box_style;
   @include display;
 
-  gap: 1%;
+  flex-wrap: wrap;
+  column-gap: 2%;
   box-shadow: none;
   padding-top: 2%;
 
@@ -130,19 +134,30 @@ $color_offer_debt: #E1801C;
     font-weight: 500
   }
 
-  a {
-    text-decoration: none;
+  button {
+    font-size: 1rem;
+    font-weight: 900;
     text-align: center;
-    font-weight: 600;
-    color: $color_link;
-
-    display: block;
+    color: #824274;
+    
+    background: none;
+    border: none;
+    
+    margin-inline: auto;
     margin-top: 4%;
+    
+    display: block;
+    cursor: pointer;
   }
 }
 
 
 /*Responsive rules*/
+@media(max-width: 1024px) {
+  .score_info_status, .score_opportunities {
+    width: 70vw;
+  }
+}
 @media(max-width: 768px) {
   .containerHeader img {
     width: 40vw
@@ -181,12 +196,6 @@ $color_offer_debt: #E1801C;
       width: 100%;
       padding: 7%;
       margin-bottom: 4%;
-
-      .grid_sale_offer {
-        img {
-          width: 45%
-        }
-      }
     }
 
     a {

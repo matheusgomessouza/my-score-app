@@ -1,0 +1,33 @@
+$color_offer_debt: #E1801C;
+$color_offer_credit: #B1BB5B;
+$color_offer_protect: #6FC1BB;
+$color_offer_discount: #11555E;
+
+@mixin heading-level($score) {
+  @if $score == low {
+    color: $color_offer_debt;
+  }
+  @else if $score == medium {
+    color: $color_offer_credit;
+  }
+  @else {
+    color: $color_offer_discount;
+  }
+}
+
+.box_offer {
+  .grid_sale_offer {
+    span {
+      p.credit {
+        text-decoration: none
+      }
+    }
+   }
+  .discount-heading {
+    svg, strong {
+      @include heading-level(high);
+      font-weight: 600;
+    }
+  }
+
+}

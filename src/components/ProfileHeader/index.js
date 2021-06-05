@@ -1,15 +1,17 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import CardOffer from '../CardOffer'
-
 import { FiChevronUp } from 'react-icons/fi';
-import './styles.css';
+import './styles.scss'
 
+import CardOffer from '../CardOffer'
+import CardCredit from '../CardCredit';
+import CardProtect from '../CardProtect';
+import CardDiscount from '../CardDiscount';
 
 
 export default function ProfileHeader() {
-  const score = useSelector(state => state.score);
+  const score = useSelector(state => state.score.initial_score);
 
   return (
     <>
@@ -47,21 +49,24 @@ export default function ProfileHeader() {
       </div>
     
       <div className="score_opportunities">
-        <CardOffer />
-      </div>
+        { score < 30 &&
+           <CardOffer />
+        }
 
+        { (score >= 31 || score <= 60) &&
+          <CardCredit />
+        }
+        
+        { score > 50 &&
+          <CardProtect />
+        }
+        
+        { score > 90 &&
+          <CardDiscount />
+        }  
+      </div>
     </>
   );
 }
-
-// const mapStateToProps = score => ({
-//   points: score.props 
-// });
-
-// Pega as actions do redux e permite transformá-las em propriedades do component
-// const mapDispatchToProps = dispatch => 
-//   bindActionCreators(scoreActions, dispatch);
-
-// export default connect(mapStateToProps, mapDispatchToProps)(ProfileHeader);
 
 
