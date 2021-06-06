@@ -15,7 +15,12 @@ export default function ProfileHeader() {
 
   return (
     <>
-      <header className="containerHeader">
+      <header className={
+        score < 30 ? "containerHeader container_bg_level_low" 
+        : score < 60 ? "containerHeader container_bg_level_medium" 
+        : score > 61 ? "containerHeader container_bg_level_high" 
+        : ""
+      }>
         <img 
           src="https://avatars.githubusercontent.com/u/62625213?v=4" 
           alt="Usuário" 
@@ -53,7 +58,7 @@ export default function ProfileHeader() {
            <CardOffer />
         }
 
-        { (score >= 31 || score <= 60) &&
+        { (score >= 31 && score <= 60) &&
           <CardCredit />
         }
         
