@@ -49,7 +49,7 @@ export default function ProfileHeader() {
             }
             >
             <img 
-              style={{ marginTop: '100%', width: '94%' }}
+              style={{ marginTop: "100%", width: '94%' }}
               src="https://avatars.githubusercontent.com/u/62625213?v=4" 
               alt="Usuário"
               />
