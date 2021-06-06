@@ -11,7 +11,7 @@ function CardDiscount() {
 
     function upgradeScore() {
       var min = Math.ceil(score);
-      var max = Math.floor(99);
+      var max = Math.floor(100);
       dispatch({ type: 'INCREASE_SCORE', nw_score: Math.floor(Math.random() * (max - min) + min) })
     }
 

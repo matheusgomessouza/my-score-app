@@ -1,7 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import { buildStyles } from 'react-circular-progressbar';
 import { FiChevronUp } from 'react-icons/fi';
+
+import 'react-circular-progressbar/dist/styles.css';
 import './styles.scss'
 
 import CardOffer from '../CardOffer'
@@ -12,6 +16,17 @@ import CardDiscount from '../CardDiscount';
 
 export default function ProfileHeader() {
   const score = useSelector(state => state.score.initial_score);
+  
+  window.addEventListener("click", () => {
+    var progressBar = document.querySelector('path.CircularProgressbar-path');      
+    
+    if(score >= 30) {
+      progressBar.classList.add("offer_credit");
+    }
+    if (score >= 60) {
+      progressBar.classList.add("offer_discount");
+    }
+  })
 
   return (
     <>
@@ -21,10 +36,26 @@ export default function ProfileHeader() {
         : score > 61 ? "containerHeader container_bg_level_high" 
         : ""
       }>
-        <img 
-          src="https://avatars.githubusercontent.com/u/62625213?v=4" 
-          alt="Usuário" 
-        />
+        <div>
+          <CircularProgressbarWithChildren 
+            value={score}
+            strokeWidth={3}
+            counterClockwise
+            styles={
+              buildStyles({
+                strokeLinecap: 'butt',
+                trailColor: '#fff',
+              })
+            }
+            >
+            <img 
+              style={{ marginTop: '100%', width: '94%' }}
+              src="https://avatars.githubusercontent.com/u/62625213?v=4" 
+              alt="Usuário"
+              />
+          </CircularProgressbarWithChildren>
+        </div>
+
         <strong>Matheus G. de Souza</strong>
       </header>
 
@@ -54,9 +85,9 @@ export default function ProfileHeader() {
       </div>
     
       <div className="score_opportunities">
-        { score < 30 &&
+        { score <= 30 &&
            <CardOffer />
-        }
+          }
 
         { (score >= 31 && score <= 60) &&
           <CardCredit />
@@ -70,6 +101,7 @@ export default function ProfileHeader() {
           <CardDiscount />
         }  
       </div>
+      
     </>
   );
 }

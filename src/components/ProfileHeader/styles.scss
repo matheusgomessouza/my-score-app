@@ -1,7 +1,9 @@
 $color_text: #606060;
 $color_text_light: #9b9b9b;
 $color_link: #824274;
-$color_offer_debt: #E1801C;
+$color_offer_debt: #DF6524;
+$color_offer_credit: #74C1B7;
+$color_offer_discount: #0D5653;
 
 
 @mixin size_bar {
@@ -20,6 +22,18 @@ $color_offer_debt: #E1801C;
   border-radius: 7px;
   box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.1);
 }
+.CircularProgressbar {
+  .CircularProgressbar-path {
+    stroke: $color_offer_debt;
+  }
+}
+/*Relative Target Progress-Bar Color*/
+.containerHeader div svg.CircularProgressbar > path.CircularProgressbar-path.offer_credit {
+  stroke: $color_offer_credit;
+}
+.containerHeader div svg.CircularProgressbar > path.CircularProgressbar-path.offer_discount {
+  stroke: $color_offer_discount;
+}
 
 .container_bg_level_low {
   background: linear-gradient(180deg, rgba(223,99,35,1) 0%, rgba(224,138,27,1) 50%, rgba(226,177,16,1) 100%);
@@ -33,14 +47,21 @@ $color_offer_debt: #E1801C;
 
 .containerHeader {
   @include display;
+
   flex-direction: column;
   padding-block: 3% 5%;
 
-    img {
-      border-radius: 50%;
-      border: 5px solid #fff;
-      width: 10vw;
-    }
+  div {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    width: 10vw;
+
+      img {
+        border-radius: 50%;
+        width: 10vw;
+      }
+  }
 
     strong {
       margin: 1.5% 0;
@@ -158,7 +179,6 @@ $color_offer_debt: #E1801C;
   }
 }
 
-
 /*Responsive rules*/
 @media(max-width: 1024px) {
   .score_info_status, .score_opportunities {
@@ -166,8 +186,21 @@ $color_offer_debt: #E1801C;
   }
 }
 @media(max-width: 768px) {
-  .containerHeader img {
-    width: 40vw
+  .containerHeader {
+    padding-block: 10% 5%;
+
+    div {
+      width: 40vw;
+    }
+
+    img {
+      width: 40vw
+    }
+
+    strong {
+        margin: 7% 0;
+        font-size: 1.3rem;
+    }
   }
 
   .score_info_status {
