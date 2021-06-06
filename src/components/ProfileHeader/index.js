@@ -61,7 +61,12 @@ export default function ProfileHeader() {
       <div className="score_info_status">
         <div className="score_level">
           <strong>{score}</strong>
-          <span>Sua pontuação é baixa</span>
+          {
+            score < 30 ? <span>Sua pontuação é baixa</span>
+            : score > 30 && score < 61 ? <span>Sua pontuação é média</span>
+            : score >= 61 ? <span>Sua pontuação é alta</span>
+            : null
+          }
           <a href="/">Saiba mais <FiChevronUp/></a>
         </div>
 

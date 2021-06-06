@@ -10,7 +10,7 @@ function CardProtect() {
 
   function upgradeScore() {
     var min = Math.ceil(score);
-    var max = Math.floor(100);
+    var max = Math.floor(101);
     dispatch({ type: 'INCREASE_SCORE', nw_score: Math.floor(Math.random() * (max - min) + min) })
   }
 
