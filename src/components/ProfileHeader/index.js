@@ -6,7 +6,7 @@ import { buildStyles } from 'react-circular-progressbar';
 import { FiChevronUp } from 'react-icons/fi';
 
 import 'react-circular-progressbar/dist/styles.css';
-import './styles.css'
+import './styles.scss'
 
 import CardOffer from '../CardOffer'
 import CardCredit from '../CardCredit';
