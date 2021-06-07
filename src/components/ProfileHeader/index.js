@@ -67,7 +67,7 @@ export default function ProfileHeader() {
             : score >= 61 ? <span>Sua pontuação é alta</span>
             : null
           }
-          <a href="/">Saiba mais <FiChevronUp/></a>
+          <a href="#">Saiba mais <FiChevronUp/></a>
         </div>
 
         <div className="grid_progressive_bar">
@@ -105,7 +105,6 @@ export default function ProfileHeader() {
           <CardDiscount />
         }  
       </div>
-      
     </>
   );
 }
