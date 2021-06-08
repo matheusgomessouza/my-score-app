@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import protect from '../../assets/id_protection.jpg';
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
 
+import './styles.scss';
+
 function CardProtect() {
   const dispatch = useDispatch();
   const score = useSelector(state => state.score.initial_score);
@@ -16,7 +18,7 @@ function CardProtect() {
 
   return (
     <div className="box_offer">
-      <div className="credit-heading">
+      <div className="protect-heading">
         <strong><AiOutlineSafetyCertificate/> Plano de proteção</strong>
         <span>Está disponível pra você um plano de proteção ao RG!</span>
       </div>
