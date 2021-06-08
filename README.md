@@ -12,6 +12,6 @@
 
 ![](./src/readme/4.jpg)
 
-- Para criar e modificar os componentes e visuais da página também utilizei a renderização condicional, no entanto, a barra de progresso ao redor da foto optei por utilizar uma dependência que cria um [component](https://www.npmjs.com/package/react-circular-progressbar) para isso. Pra modificar as cores da barra, utilizei um addListener para alterar a classe do elemento ao evento de click, criando uma condicional de acordo com as regras de pontuação.
+- Para criar e modificar os componentes e visuais da página também utilizei a renderização condicional, no entanto, para a barra de progresso ao redor da foto optei por utilizar uma dependência que cria um [component](https://www.npmjs.com/package/react-circular-progressbar) para isso. Pra modificar as cores da barra, utilizei um addListener para alterar a classe do elemento ao evento de click, criando uma condicional de acordo com as regras de pontuação.
 
 ![](./src/readme/5.jpg)
