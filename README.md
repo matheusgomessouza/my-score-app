@@ -1,4 +1,4 @@
-**Resolução:** Primeiro utilizei o redux para centralizar o estado da aplicação. Então assim, pude distribuir por meio do <Provider store={store}> </Provider> para todos os componentes essa informação.
+**Resolução:** Primeiro utilizei o redux para centralizar o estado da aplicação. Então assim, pude distribuir por meio do *Provider* para todos os componentes essa informação.
 
 ![](./src/readme/1.jpg)
 
