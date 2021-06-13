@@ -1,5 +1,5 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useContext } from 'react';
+import { ScoreContext } from '../../contexts/ScoreContext'; 
 
 import { FaRegFileAlt } from 'react-icons/fa';
 import santander from '../../assets/santander.jpg'
@@ -7,14 +7,7 @@ import santander from '../../assets/santander.jpg'
 import './styles.scss';
 
 function CardOffer() {
-  const dispatch = useDispatch();
-  const score = useSelector(state => state.score.initial_score);
-
-  function upgradeScore() {
-    var min = Math.ceil(score);
-    var max = Math.floor(101);
-    dispatch({ type: 'INCREASE_SCORE', nw_score: Math.floor(Math.random() * (max - min) + min) })
-  }
+  const { upgradeScore } = useContext(ScoreContext);
 
   return (
     <div className="box_offer">

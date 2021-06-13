@@ -18,7 +18,7 @@ export default function ProfileHeader() {
   const score = useSelector(state => state.score.initial_score);
   
   window.addEventListener("click", () => {
-    var progressBar = document.querySelector('path.CircularProgressbar-path');      
+    const progressBar = document.querySelector('path.CircularProgressbar-path');      
     
     if(score >= 30) {
       progressBar.classList.add("offer_credit");

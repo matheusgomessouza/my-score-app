@@ -1,5 +1,5 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useContext } from 'react';
+import { ScoreContext } from '../../contexts/ScoreContext'; 
 
 import './styles.scss';
 import { GoCreditCard } from 'react-icons/go';
@@ -7,14 +7,7 @@ import nubank from '../../assets/nubank.jpg';
 import inter from '../../assets/inter.jpg';
 
 export function CardCredit() {
-  const dispatch = useDispatch();
-  const score = useSelector(state => state.score.initial_score);
-
-  function upgradeScore() {
-    var min = Math.ceil(score);
-    var max = Math.floor(101);
-    dispatch({ type: 'INCREASE_SCORE', nw_score: Math.floor(Math.random() * (max - min) + min) })
-  }
+  const { upgradeScore } = useContext(ScoreContext);
 
   return (
     <div className="box_offer">
@@ -37,14 +30,7 @@ export function CardCredit() {
 }
 
 export function CardCreditTwo() {
-  const dispatch = useDispatch();
-  const score = useSelector(state => state.score.initial_score);
-
-  function upgradeScore() {
-    var min = Math.ceil(score);
-    var max = Math.floor(101);
-    dispatch({ type: 'INCREASE_SCORE', nw_score: Math.floor(Math.random() * (max - min) + min) })
-  }
+  const { upgradeScore } = useContext(ScoreContext);
 
   return (
     <div className="box_offer">
