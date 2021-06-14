@@ -7,7 +7,7 @@ import santander from '../../assets/santander.jpg'
 import './styles.scss';
 
 function CardOffer() {
-  const { upgradeScore } = useContext(ScoreContext);
+  const  { upgradeScore }: any   = useContext(ScoreContext);
 
   return (
     <div className="box_offer">

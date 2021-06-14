@@ -3,16 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 
 export const ScoreContext = createContext({});
 
-interface ChallengesProviderProps {
+interface ScoreProviderProps {
   children: ReactNode;
+  upgradeScore?: () => void;
 }
 
 export type DefaultRootState = {
   score: any;
 }
 
-
-export function ScoreProvider({ children, ...rest }: ChallengesProviderProps) {
+export function ScoreProvider({ children, ...rest }: ScoreProviderProps) {
   const dispatch = useDispatch();
   const score = useSelector((state: DefaultRootState) => state.score.initial_score);
 
@@ -25,7 +25,9 @@ export function ScoreProvider({ children, ...rest }: ChallengesProviderProps) {
   return (
     <ScoreContext.Provider
       value={{
-        upgradeScore
+        upgradeScore,
+        dispatch,
+        score
       }}
     >
       { children }

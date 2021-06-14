@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ScoreContext } from '../../contexts/ScoreContext'; 
 import { useSelector } from 'react-redux';
 
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
@@ -13,12 +14,13 @@ import { CardCredit, CardCreditTwo } from '../CardCredit';
 import CardProtect from '../CardProtect';
 import CardDiscount from '../CardDiscount';
 
+import type { DefaultRootState } from "../../contexts/ScoreContext";
 
 export default function ProfileHeader() {
-  const score = useSelector(state => state.score.initial_score);
+  const score = useSelector((state: DefaultRootState) => state.score.initial_score);
   
   window.addEventListener("click", () => {
-    const progressBar = document.querySelector('path.CircularProgressbar-path');      
+    const progressBar: any = document.querySelector('path.CircularProgressbar-path');      
     
     if(score >= 30) {
       progressBar.classList.add("offer_credit");

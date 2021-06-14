@@ -7,7 +7,7 @@ import { AiOutlineSafetyCertificate } from "react-icons/ai";
 import './styles.scss';
 
 function CardProtect() {
-  const { upgradeScore } = useContext(ScoreContext);
+  const { upgradeScore }: any  = useContext(ScoreContext);
 
   return (
     <div className="box_offer">

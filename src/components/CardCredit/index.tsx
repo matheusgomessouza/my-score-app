@@ -7,7 +7,7 @@ import nubank from '../../assets/nubank.jpg';
 import inter from '../../assets/inter.jpg';
 
 export function CardCredit() {
-  const { upgradeScore } = useContext(ScoreContext);
+  const  { upgradeScore }: any  = useContext(ScoreContext);
 
   return (
     <div className="box_offer">
@@ -30,7 +30,7 @@ export function CardCredit() {
 }
 
 export function CardCreditTwo() {
-  const { upgradeScore } = useContext(ScoreContext);
+  const { upgradeScore }: any  = useContext(ScoreContext);
 
   return (
     <div className="box_offer">

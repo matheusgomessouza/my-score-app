@@ -6,7 +6,7 @@ import { AiOutlinePercentage } from 'react-icons/ai';
 import protect from '../../assets/id_protection.jpg';
 
 function CardDiscount() {
-  const { upgradeScore } = useContext(ScoreContext);
+  const  { upgradeScore }: any  = useContext(ScoreContext);
   
   return (
     <div className="box_offer">
