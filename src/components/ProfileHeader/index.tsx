@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { ScoreContext } from '../../contexts/ScoreContext'; 
+import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
