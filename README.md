@@ -31,7 +31,7 @@ Você ganhará pontos extras, se:
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-**Resolução:** Primeiro utilizei o redux para centralizar o estado da aplicação. Distribuindo por meio do *Provider* essa informação para toda a aplicação.
+🔬 **Resolução:** Primeiro utilizei o redux para centralizar o estado da aplicação. Distribuindo por meio do *Provider* essa informação para toda a aplicação.
 
 ![](./src/readme/1.jpg)
 
@@ -48,6 +48,17 @@ Você ganhará pontos extras, se:
 - Para criar e modificar os componentes e visuais da página também utilizei a renderização condicional, no entanto, para a barra de progresso ao redor da foto optei por utilizar uma dependência que cria um [component](https://www.npmjs.com/package/react-circular-progressbar) para isso. Pra modificar as cores da barra, utilizei um addListener para alterar a classe do elemento ao evento de click, criando uma condicional de acordo com as regras de pontuação.
 
 ![](./src/readme/5.jpg)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+⚙️ **Tecnologias utilizadas / Used Technologies**
+ 
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Redux](https://redux.js.org/)
+- [SASS](https://sass-lang.com/)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🚀 **Como rodar o projeto**
 
