@@ -29,9 +29,7 @@ Você ganhará pontos extras, se:
 - Documentar a solução;
 - Desenvolver um código limpo e bem organizado.
 
-
-Boa sorte!
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Resolução:** Primeiro utilizei o redux para centralizar o estado da aplicação. Distribuindo por meio do *Provider* essa informação para toda a aplicação.
 
