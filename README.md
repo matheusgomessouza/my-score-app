@@ -51,5 +51,5 @@ Você ganhará pontos extras, se:
 
 🚀 **Como rodar o projeto**
 
-Instale as dependencias com `yarn`
-Rode o front-end com `yarn start`
+- Instale as dependencias com `yarn`
+- Rode o front-end com `yarn start`
