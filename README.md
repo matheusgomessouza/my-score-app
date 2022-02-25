@@ -51,7 +51,7 @@ Você ganhará pontos extras, se:
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-⚙️ **Tecnologias utilizadas / Used Technologies**
+⚙️ **Tecnologias utilizadas**
  
 - [React](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
