@@ -1,18 +1,18 @@
-import { createContext, ReactNode } from 'react';
+import { createContext, ReactElement, ReactNode } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 export const ScoreContext = createContext({});
 
 interface ScoreProviderProps {
 	children: ReactNode;
-	upgradeScore?: () => void;
+	update?: () => void;
 }
 
 export type DefaultRootState = {
-	score: any;
+	score: [number] | any;
 };
 
-export function ScoreProvider({ children, ...rest }: ScoreProviderProps) {
+export function ScoreProvider({ children }: ScoreProviderProps): ReactElement {
 	const dispatch = useDispatch();
 	const score = useSelector(
 		(state: DefaultRootState) => state.score.initial_score

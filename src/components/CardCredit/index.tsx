@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { ReactElement, useContext } from 'react';
 import { ScoreContext } from '../../contexts/ScoreContext';
 
 import './styles.scss';
@@ -6,7 +6,7 @@ import { GoCreditCard } from 'react-icons/go';
 import nubank from '../../assets/nubank.jpg';
 import inter from '../../assets/inter.jpg';
 
-export function CardCredit() {
+export function CardCredit(): ReactElement {
 	const { upgradeScore }: any = useContext(ScoreContext);
 
 	return (
@@ -26,14 +26,14 @@ export function CardCredit() {
 				</span>
 			</div>
 
-			<button type="submit" onClick={upgradeScore}>
+			<button type="submit" onClick={upgradeScore()}>
 				Ver oferta
 			</button>
 		</div>
 	);
 }
 
-export function CardCreditTwo() {
+export function CardCreditTwo(): ReactElement {
 	const { upgradeScore }: any = useContext(ScoreContext);
 
 	return (
@@ -53,7 +53,7 @@ export function CardCreditTwo() {
 				</span>
 			</div>
 
-			<button type="submit" onClick={upgradeScore}>
+			<button type="submit" onClick={upgradeScore()}>
 				Ver oferta
 			</button>
 		</div>

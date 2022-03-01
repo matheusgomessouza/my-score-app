@@ -3,8 +3,9 @@ import store from './store';
 
 import ProfileHeader from './components/ProfileHeader';
 import { ScoreProvider } from './contexts/ScoreContext';
+import { ReactElement } from 'react';
 
-function App() {
+function App(): ReactElement {
 	return (
 		<Provider store={store}>
 			<ScoreProvider>

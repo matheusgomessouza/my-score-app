@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { ReactElement, useContext } from 'react';
 import { ScoreContext } from '../../contexts/ScoreContext';
 
 import { FaRegFileAlt } from 'react-icons/fa';
@@ -6,7 +6,7 @@ import santander from '../../assets/santander.jpg';
 
 import './styles.scss';
 
-function CardOffer() {
+function CardOffer(): ReactElement {
 	const { upgradeScore }: any = useContext(ScoreContext);
 
 	return (
@@ -26,7 +26,7 @@ function CardOffer() {
 				</span>
 			</div>
 
-			<button type="submit" onClick={upgradeScore}>
+			<button type="submit" onClick={upgradeScore()}>
 				Negociar agora
 			</button>
 		</div>

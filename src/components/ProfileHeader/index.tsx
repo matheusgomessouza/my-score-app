@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactElement, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
@@ -15,23 +15,24 @@ import CardDiscount from '../CardDiscount';
 
 import type { DefaultRootState } from '../../contexts/ScoreContext';
 
-export default function ProfileHeader() {
+export default function ProfileHeader(): ReactElement {
 	const score = useSelector(
 		(state: DefaultRootState) => state.score.initial_score
 	);
-
+	
 	window.addEventListener('click', () => {
-		const progressBar: any = document.querySelector(
+		const progressBar: HTMLElement | null = document.querySelector(
 			'path.CircularProgressbar-path'
 		);
-
+	
 		if (score >= 30) {
-			progressBar.classList.add('offer_credit');
+			progressBar?.classList.add('offer_credit');
 		}
 		if (score >= 60) {
-			progressBar.classList.add('offer_discount');
+			progressBar?.classList.add('offer_discount');
 		}
 	});
+	
 
 	return (
 		<>

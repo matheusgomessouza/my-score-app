@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { ReactElement, useContext } from 'react';
 import { ScoreContext } from '../../contexts/ScoreContext';
 
 import './styles.scss';
 import { AiOutlinePercentage } from 'react-icons/ai';
 import protect from '../../assets/id_protection.jpg';
 
-function CardDiscount() {
+function CardDiscount(): ReactElement {
 	const { upgradeScore }: any = useContext(ScoreContext);
 
 	return (
@@ -25,7 +25,7 @@ function CardDiscount() {
 				</span>
 			</div>
 
-			<button type="submit" onClick={upgradeScore}>
+			<button type="submit" onClick={upgradeScore()}>
 				Ver desconto
 			</button>
 		</div>

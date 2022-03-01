@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { ReactElement, useContext } from 'react';
 import { ScoreContext } from '../../contexts/ScoreContext';
 
 import protect from '../../assets/id_protection.jpg';
@@ -6,7 +6,7 @@ import { AiOutlineSafetyCertificate } from 'react-icons/ai';
 
 import './styles.scss';
 
-function CardProtect() {
+function CardProtect(): ReactElement {
 	const { upgradeScore }: any = useContext(ScoreContext);
 
 	return (
@@ -26,7 +26,7 @@ function CardProtect() {
 				</span>
 			</div>
 
-			<button type="submit" onClick={upgradeScore}>
+			<button type="submit" onClick={upgradeScore()}>
 				Ver plano
 			</button>
 		</div>
