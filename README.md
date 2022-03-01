@@ -1,3 +1,5 @@
+![](cover.jpg)
+
 **Desafio proposto**
 
 Estamos muito felizes em saber que você chegou até aqui. Realize o teste com calma, essa é a oportunidade de demonstrar suas habilidades e conhecimentos!
