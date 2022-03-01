@@ -64,3 +64,12 @@ Você ganhará pontos extras, se:
 
 - Instale as dependencias com `yarn`
 - Rode o front-end com `yarn start`
+
+----------------------------------------------------------------------------------------------------------
+
+🧑🏾‍💻 **Autor / Author**
+
+**Matheus Gomes de Souza**
+
+LinkedIn: https://www.linkedin.com/in/matheus-gomes-de-souza/ <br/>
+E-mail: matheusg_souza@outlook.com
